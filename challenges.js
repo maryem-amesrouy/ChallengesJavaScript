@@ -1,26 +1,37 @@
 const categories = ["Papeterie", "Accessoires", "Sacs"];
 
-console.log(categories[0])
-let sum=0
+// console.log(categories[0])
+// let sum=0
 
-for (let i = 0; i < categories.length; i++) {
-    sum ++
+// for (let i = 0; i < categories.length; i++) {
+//     sum ++
     
-}
-console.log(sum)
-const ajouterClassement=categories.push("Classement")
-console.log (categories)
-categories[1]="Bureau"
-const sup =  categories.pop()
-console.log(categories)
-
-
+// }
+// console.log(sum)
+// const ajouterClassement=categories.push("Classement")
+// console.log (categories)
+// categories[1]="Bureau"
+// const sup =  categories.pop()
+// console.log(categories)
 
 const boutique = {
     nom: "Stock & Fournitures",
     ville: "Youssoufia",
     ouverte: true
 };
+
+console.log("La ville est",boutique.ville)
+boutique.devise="MAD"
+console.log("la devise est" ,boutique.devise)
+
+const ouvFer = boutique.ouverte
+
+if (ouvFer === true) {
+    console.log("le statut affiché est Fermée");   
+}else{
+    console.log("le statut affiché est ouverte");
+    
+}
 
 
 const produits = [

@@ -20,18 +20,18 @@ const boutique = {
     ouverte: true
 };
 
-console.log("La ville est",boutique.ville)
-boutique.devise="MAD"
-console.log("la devise est" ,boutique.devise)
+// console.log("La ville est",boutique.ville)
+// boutique.devise="MAD"
+// console.log("la devise est" ,boutique.devise)
 
-const ouvFer = boutique.ouverte
+// const ouvFer = boutique.ouverte
 
-if (ouvFer === true) {
-    console.log("le statut affiché est Fermée");   
-}else{
-    console.log("le statut affiché est ouverte");
+// if (ouvFer === true) {
+//     console.log("le statut affiché est Fermée");   
+// }else{
+//     console.log("le statut affiché est ouverte");
     
-}
+// }
 
 
 const produits = [
@@ -71,3 +71,44 @@ const produits = [
     stock: 4 
 }
 ];
+
+
+let copieProduit =[];
+
+for (let i = 0; i< produits.length; i++) {
+        copieProduit.push(produits[i])
+    }
+    console.log(copieProduit)
+
+let copProduit = [...produits]
+
+
+for (let i = 0; i < copieProduit.length; i++) {
+    
+     console.log(copieProduit[i].nom , copieProduit[i].stock)
+    
+}
+
+for (let i = 0; i < copProduit.length; i++) {
+    let id = copieProduit[i].id
+    if (id == 102) {
+       copieProduit[i].stock=6
+       break
+    }
+    
+}
+
+let gomme ={
+     id: 106, 
+    nom: "Gomme",
+    categorie: "Papeterie",
+    prix: 5, 
+    stock: 5
+}
+copieProduit.push(gomme)
+
+
+
+copieProduit.splice(3,1)
+
+console.log (copieProduit)

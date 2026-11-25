@@ -160,22 +160,28 @@ const produits = [
 
 //////// 7 ////////////////////////////////////
 
-const idProd = produits.find((produitId) => {
-    return produitId.id == 103
+// const idProd = produits.find((produitId) => {
+//     return produitId.id == 103
     // return produitId.id == 199
 
-})
+// })
 
-console.log(idProd)
+// console.log(idProd)
 
-const idexProd = produits.findIndex((produitId) => {
-    return produitId.id == 103
+// const idexProd = produits.findIndex((produitId) => {
+//     return produitId.id == 103
     // return produitId.id == 199
+// })
+
+// console.log(idexProd)
+
+
+////////////// 8 /////////////////////////////////
+
+const infarStock = produits.some((produit)=>{
+    return produit.stock == 0
 })
-
-console.log(idexProd)
-
-
+console.log(infarStock)
 
 
 

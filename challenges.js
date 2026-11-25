@@ -162,12 +162,15 @@ const produits = [
 
 const idProd = produits.find((produitId) => {
     return produitId.id == 103
+    // return produitId.id == 199
+
 })
 
 console.log(idProd)
 
 const idexProd = produits.findIndex((produitId) => {
     return produitId.id == 103
+    // return produitId.id == 199
 })
 
 console.log(idexProd)

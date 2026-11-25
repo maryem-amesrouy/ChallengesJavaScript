@@ -178,10 +178,22 @@ const produits = [
 
 ////////////// 8 /////////////////////////////////
 
-const infarStock = produits.some((produit)=>{
-    return produit.stock == 0
+// const infarStock = produits.some((produit)=>{
+//     return produit.stock == 0
+// })
+// console.log(infarStock)
+
+/////////////// 9 ////////////////////////////////////
+
+const prixPosi = produits.every((produit)=>{
+    return produit.prix >= 0
 })
-console.log(infarStock)
+console.log(prixPosi)
+
+const stockPosi = produits.every((produit)=>{
+    return produit.stock > 0
+})
+console.log(stockPosi)
 
 
 

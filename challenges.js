@@ -1,4 +1,5 @@
 const categories = ["Papeterie", "Accessoires", "Sacs"];
+//////// 1 //////////////////////////
 
 // console.log(categories[0])
 // let sum=0
@@ -19,6 +20,7 @@ const boutique = {
     ville: "Youssoufia",
     ouverte: true
 };
+/////////// 2 ////////////////////////////////////////////
 
 // console.log("La ville est",boutique.ville)
 // boutique.devise="MAD"
@@ -72,43 +74,68 @@ const produits = [
 }
 ];
 
-
-let copieProduit =[];
-
-for (let i = 0; i< produits.length; i++) {
-        copieProduit.push(produits[i])
-    }
-    console.log(copieProduit)
-
-let copProduit = [...produits]
+//////////// 3 ////////////////////////////////
 
 
-for (let i = 0; i < copieProduit.length; i++) {
+// let copieProduit =[];
+
+// for (let i = 0; i< produits.length; i++) {
+//         copieProduit.push(produits[i])
+//     }
+//     console.log(copieProduit)
+
+// let copProduit = [...produits]
+
+
+// for (let i = 0; i < copieProduit.length; i++) {
     
-     console.log(copieProduit[i].nom , copieProduit[i].stock)
+//      console.log(copieProduit[i].nom , copieProduit[i].stock)
     
-}
+// }
 
-for (let i = 0; i < copProduit.length; i++) {
-    let id = copieProduit[i].id
-    if (id == 102) {
-       copieProduit[i].stock=6
-       break
-    }
+// for (let i = 0; i < copProduit.length; i++) {
+//     let id = copieProduit[i].id
+//     if (id == 102) {
+//        copieProduit[i].stock=6
+//        break
+//     }
     
-}
+// }
 
-let gomme ={
-     id: 106, 
-    nom: "Gomme",
-    categorie: "Papeterie",
-    prix: 5, 
-    stock: 5
-}
-copieProduit.push(gomme)
+// let gomme ={
+//      id: 106, 
+//     nom: "Gomme",
+//     categorie: "Papeterie",
+//     prix: 5, 
+//     stock: 5
+// }
+// copieProduit.push(gomme)
 
 
 
-copieProduit.splice(3,1)
+// copieProduit.splice(3,1)
 
-console.log (copieProduit)
+// console.log (copieProduit)
+
+
+
+/////////4///////////////////////////////////
+
+    const stockSupe = produits.filter((produit)=>{
+        return produit.stock > 0
+    } )
+     console.log (stockSupe);
+
+     const papeterie = stockSupe.filter((papetrie) =>{
+        return papetrie.categorie == "Papeterie"
+     })
+
+     console.log(papeterie)
+
+
+
+
+
+
+
+

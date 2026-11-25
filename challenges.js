@@ -119,18 +119,31 @@ const produits = [
 
 
 
-/////////4///////////////////////////////////
+///////// 4 ///////////////////////////////////
 
-    const stockSupe = produits.filter((produit)=>{
-        return produit.stock > 0
-    } )
-     console.log (stockSupe);
+    // const stockSupe = produits.filter((produit)=>{
+    //     return produit.stock > 0
+    // } )
+    //  console.log (stockSupe);
 
-     const papeterie = stockSupe.filter((papetrie) =>{
-        return papetrie.categorie == "Papeterie"
-     })
+    //  const papeterie = stockSupe.filter((papetrie) =>{
+    //     return papetrie.categorie == "Papeterie"
+    //  })
 
-     console.log(papeterie)
+    //  console.log(papeterie)
+
+//////////// 5 ///////////////////////////////     
+
+const nomProduit = produits.map((produitN) =>{
+    return produitN.nom
+})
+
+console.log (nomProduit)
+
+const prixNomProduit = produits.map((nomPrix)=>{
+    return (nomPrix.nom +" - "+ nomPrix.prix + " DH")
+})
+console.log (prixNomProduit)
 
 
 

@@ -134,18 +134,30 @@ const produits = [
 
 //////////// 5 ///////////////////////////////     
 
-const nomProduit = produits.map((produitN) =>{
-    return produitN.nom
-})
+// const nomProduit = produits.map((produitN) =>{
+//     return produitN.nom
+// })
 
-console.log (nomProduit)
+// console.log (nomProduit)
 
-const prixNomProduit = produits.map((nomPrix)=>{
-    return (nomPrix.nom +" - "+ nomPrix.prix + " DH")
-})
-console.log (prixNomProduit)
+// const prixNomProduit = produits.map((nomPrix)=>{
+//     return (nomPrix.nom +" - "+ nomPrix.prix + " DH")
+// })
+// console.log (prixNomProduit)
+
+/////////// 6 /////////////////////////////////////
 
 
+let stockP = produits.stock
+const unite = produits.reduce((sum , produit) =>{
+   return sum + (produit.stock)
+},0);
+console.log(unite , "unités")
+
+const prix = produits.reduce((sum , produit) =>{
+   return sum + (produit.stock * produit.prix)
+},0);
+console.log(prix , "DH")
 
 
 

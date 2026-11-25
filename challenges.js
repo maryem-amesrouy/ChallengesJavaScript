@@ -147,17 +147,32 @@ const produits = [
 
 /////////// 6 /////////////////////////////////////
 
+// let stockP = produits.stock
+// const unite = produits.reduce((sum , produit) =>{
+//    return sum + (produit.stock)
+// },0);
+// console.log(unite , "unités")
 
-let stockP = produits.stock
-const unite = produits.reduce((sum , produit) =>{
-   return sum + (produit.stock)
-},0);
-console.log(unite , "unités")
+// const prix = produits.reduce((sum , produit) =>{
+//    return sum + (produit.stock * produit.prix)
+// },0);
+// console.log(prix , "DH")
 
-const prix = produits.reduce((sum , produit) =>{
-   return sum + (produit.stock * produit.prix)
-},0);
-console.log(prix , "DH")
+//////// 7 ////////////////////////////////////
+
+const idProd = produits.find((produitId) => {
+    return produitId.id == 103
+})
+
+console.log(idProd)
+
+const idexProd = produits.findIndex((produitId) => {
+    return produitId.id == 103
+})
+
+console.log(idexProd)
+
+
 
 
 

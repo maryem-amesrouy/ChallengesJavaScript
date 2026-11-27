@@ -185,15 +185,38 @@ const produits = [
 
 /////////////// 9 ////////////////////////////////////
 
-const prixPosi = produits.every((produit)=>{
-    return produit.prix >= 0
-})
-console.log(prixPosi)
+// const prixPosi = produits.every((produit)=>{
+//     return produit.prix >= 0
+// })
+// console.log(prixPosi)
 
-const stockPosi = produits.every((produit)=>{
-    return produit.stock > 0
+// const stockPosi = produits.every((produit)=>{
+//     return produit.stock > 0
+// })
+// console.log(stockPosi)
+
+
+////// 10 //////////////////////////////////////
+
+
+const papeterie = produits.filter((produit)=>{
+    return (produit.stock > 0 && produit.categorie == "Papeterie")
+    
 })
-console.log(stockPosi)
+
+console.log (papeterie)
+
+const nomPapeterie = papeterie.map((produitNom) =>{
+    return produitNom.nom
+})
+
+console.log(nomPapeterie);
+
+const stockPapeterie = papeterie.reduce((sum , produit )=>{
+    return sum + (produit.stock * produit.prix)
+}, 0)
+console.log(stockPapeterie , "DH");
+
 
 
 
